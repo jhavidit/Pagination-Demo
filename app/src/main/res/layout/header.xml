@@ -7,11 +7,11 @@
     android:background="@color/colorPrimary">
 
     <androidx.cardview.widget.CardView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         android:layout_marginLeft="@dimen/dimen_20"
         android:layout_marginRight="@dimen/dimen_20"
-        android:layout_marginTop="@dimen/dimen_12"
+        android:layout_marginTop="@dimen/dimen_40"
         app:cardCornerRadius="100dp">
 
         <ImageView
@@ -32,7 +32,7 @@
         android:layout_marginTop="@dimen/dimen_12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="@dimen/dimen_text_20"
+        android:textSize="@dimen/dimen_text_16"
         android:text="Vidit Jha"
         android:textColor="#FFFFFF"
         android:gravity="clip_vertical"/>
@@ -41,10 +41,9 @@
         android:id="@+id/email"
         android:layout_marginLeft="@dimen/dimen_20"
         android:layout_marginRight="@dimen/dimen_20"
-        android:layout_marginTop="@dimen/dimen_12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="@dimen/dimen_text_20"
+        android:textSize="@dimen/dimen_text_16"
         android:text="jhavidit@gmail.com"
         android:textColor="#FFFFFF"
         android:gravity="clip_vertical"/>

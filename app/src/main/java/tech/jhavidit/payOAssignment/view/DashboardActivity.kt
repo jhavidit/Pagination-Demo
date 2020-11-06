@@ -13,12 +13,16 @@ import androidx.navigation.Navigation
 import androidx.navigation.ui.NavigationUI
 import com.google.android.material.navigation.NavigationView
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_dashboard.*
+import kotlinx.android.synthetic.main.header.*
 import tech.jhavidit.payOAssignment.R
 import tech.jhavidit.payOAssignment.databinding.ActivityDashboardBinding
 class DashboardActivity : AppCompatActivity() , NavigationView.OnNavigationItemSelectedListener{
     private lateinit var binding:ActivityDashboardBinding
     private lateinit var firebaseAuth: FirebaseAuth
+    private lateinit var firestore: FirebaseFirestore
+    private lateinit var userID : String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,8 +36,17 @@ class DashboardActivity : AppCompatActivity() , NavigationView.OnNavigationItemS
 
        binding.navView.setNavigationItemSelectedListener(this)
 
-        displayScreen(R.id.nav_home)
+        firebaseAuth=FirebaseAuth.getInstance()
+        firestore= FirebaseFirestore.getInstance()
+        userID = firebaseAuth.currentUser!!.uid
+        val documentReference = firestore.collection("users").document(userID)
+        documentReference.addSnapshotListener { value, error ->
+            val nameUser = value?.getString("firstName")+" "+value?.getString("lastName")
+            name.text = nameUser
+            email.text = value?.getString("emailID")
+        }
 
+        displayScreen(R.id.nav_home)
 
     }
 
@@ -67,7 +80,7 @@ class DashboardActivity : AppCompatActivity() , NavigationView.OnNavigationItemS
         }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
-         displayScreen(item.itemId)
+        displayScreen(item.itemId)
 
         drawer_layout.closeDrawer(GravityCompat.START)
         return true
