@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/coordinator_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="left"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="10dp"
+                android:layout_weight="3"
+                android:src="@drawable/ic_bank" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="5"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="left"
+                    android:text="PayO Assignment"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="36sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="Log In"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="26sp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/username_input_layout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_4"
+
+                    app:boxCornerRadiusBottomEnd="@dimen/dimen_8"
+                    app:boxCornerRadiusBottomStart="@dimen/dimen_8"
+                    app:boxCornerRadiusTopEnd="@dimen/dimen_8"
+                    app:boxCornerRadiusTopStart="@dimen/dimen_8"
+                    app:boxStrokeColor="@color/colorPrimary"
+                    app:startIconTint="@color/colorPrimary"
+                    android:backgroundTint="@color/colorPrimary"
+                    app:startIconDrawable="@drawable/ic_icon_ionic_md_person">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/username_input"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Username"
+                        android:inputType="textEmailAddress"
+
+                        android:textSize="@dimen/dimen_text_16" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/username_password_layout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:startIconTint="@color/colorPrimary"
+                    android:layout_marginTop="@dimen/dimen_4"
+                    app:boxCornerRadiusBottomEnd="@dimen/dimen_8"
+                    app:boxCornerRadiusBottomStart="@dimen/dimen_8"
+                    app:boxCornerRadiusTopEnd="@dimen/dimen_8"
+
+                    app:boxCornerRadiusTopStart="@dimen/dimen_8"
+                    app:passwordToggleEnabled="true"
+                    app:boxStrokeColor="@color/colorPrimary"
+                    app:startIconDrawable="@drawable/ic_icon_awesome_unlock">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/username_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Password"
+                        app:startIconTint="@color/colorPrimary"
+                        android:inputType="textPassword"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/dimen_text_16" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@color/colorPrimary"
+                    android:text="Log In"
+                    android:textAllCaps="false"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:cornerRadius="4dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:alpha="0.8"
+                        android:gravity="center_horizontal"
+                        android:text="New User? "
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/btn_sign_up"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="Sign Up"
+                        android:textColor="@color/colorPrimary"
+                        android:textColorHint="@color/colorPrimary"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</layout>

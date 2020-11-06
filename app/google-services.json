@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "571973224096",
+    "firebase_url": "https://payo-assignment-dc757.firebaseio.com",
+    "project_id": "payo-assignment-dc757",
+    "storage_bucket": "payo-assignment-dc757.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:571973224096:android:a0b6a9efb68bf305c0abc5",
+        "android_client_info": {
+          "package_name": "tech.jhavidit.payOAssignment"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "571973224096-bv7c8219gnogl1mrhfli42uvq5gccobo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCG8hswWcvtc-fTTSEj3RZSb9_4kZ4yhYQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "571973224096-bv7c8219gnogl1mrhfli42uvq5gccobo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
